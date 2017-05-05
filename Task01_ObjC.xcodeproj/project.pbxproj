@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		56CFEBF11EBB099A00FCE193 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CFEBF01EBB099A00FCE193 /* main.m */; };
 		56CFEBF91EBB09CC00FCE193 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CFEBF81EBB09CC00FCE193 /* Person.m */; };
+		56D2540B1EBC5B7F00D71B5A /* NSObject+IDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D2540A1EBC5B7F00D71B5A /* NSObject+IDPCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		56CFEBF01EBB099A00FCE193 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56CFEBF71EBB09CC00FCE193 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		56CFEBF81EBB09CC00FCE193 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		56D254091EBC5B7F00D71B5A /* NSObject+IDPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+IDPCategory.h"; sourceTree = "<group>"; };
+		56D2540A1EBC5B7F00D71B5A /* NSObject+IDPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IDPCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				56CFEBF01EBB099A00FCE193 /* main.m */,
+				56D254091EBC5B7F00D71B5A /* NSObject+IDPCategory.h */,
+				56D2540A1EBC5B7F00D71B5A /* NSObject+IDPCategory.m */,
 				56CFEBF71EBB09CC00FCE193 /* Person.h */,
 				56CFEBF81EBB09CC00FCE193 /* Person.m */,
 			);
@@ -124,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56D2540B1EBC5B7F00D71B5A /* NSObject+IDPCategory.m in Sources */,
 				56CFEBF91EBB09CC00FCE193 /* Person.m in Sources */,
 				56CFEBF11EBB099A00FCE193 /* main.m in Sources */,
 			);
@@ -252,6 +258,7 @@
 				56CFEBF61EBB099A00FCE193 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

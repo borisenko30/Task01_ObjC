@@ -15,18 +15,19 @@ typedef NS_ENUM(NSUInteger, Gender) {
 
 @interface Person : NSObject
 @property Gender                        gender;
-@property (copy) NSString               *name;
-@property (copy) NSNumber               *weight;
+@property (nonatomic, copy) NSString    *name;
+@property (nonatomic, copy) NSNumber    *weight;
 @property NSInteger                     age;
-@property (retain) NSMutableArray       *children;
 
-@property (nonatomic, readonly, retain) NSArray *childrenArray;
+@property (nonatomic, readonly, copy) NSArray        *children;
 
+- (instancetype)initWithName:(NSString *)name gender:(Gender)gender weight:(NSNumber *)weight age:(NSUInteger)age;
+- (NSArray *)initArrayWithObjectsCount:(NSUInteger) count;
 - (Person *)giveBirth;
 - (void)makeWarNotLove;
-- (void)addChild:(Person *) child;
+- (void)addChild:(Person *)child;
 - (void)removeLastChild;
-- (void)removeChildAtIndex:(NSUInteger) index;
+- (void)removeChildAtIndex:(NSUInteger)index;
 - (void)sayHi;
 - (void)genderCheck;
 
