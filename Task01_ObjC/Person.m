@@ -95,7 +95,12 @@
 }
 
 - (void)removeChildAtIndex:(NSUInteger)index {
-    [self.childrenArray removeObjectAtIndex:index];
+    NSMutableArray *arr = self.childrenArray;
+    if (arr.count > index) {
+        [arr removeObjectAtIndex:index];
+    } else {
+        NSLog(@"Error: wrong index!");
+    }
 }
 
 - (void)sayHi {
