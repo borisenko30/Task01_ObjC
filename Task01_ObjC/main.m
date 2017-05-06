@@ -2,12 +2,11 @@
 //  main.m
 //  Task01_ObjC
 //
-//  Created by Student003 on 5/4/17.
-//  Copyright © 2017 Student003. All rights reserved.
+//  Created by Admin on 06.05.17.
+//  Copyright (c) 2017 Admin. All rights reserved.
 //
-#import <Foundation/Foundation.h>
-#import "IDPPersonTests.h"
 
+#import "IDPImportFiles.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

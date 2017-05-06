@@ -6,9 +6,11 @@
 //  Copyright © 2017 Student003. All rights reserved.
 //
 
+#import "IDPPerson.h"
+
 @interface IDPPerson ()
 
-@property (nonatomic, retain) NSMutableArray        *mutableChildren;
+@property (nonatomic, retain)NSMutableArray *mutableChildren;
 
 @end
 
@@ -37,40 +39,8 @@
     return self;
 }
 
-- (instancetype)initWithName:(NSString *)name gender:(IDPGender)gender weight:(NSNumber *)weight age:(NSUInteger)age{
-    self = [super init];
-    if (self) {
-        self.gender = [NSObject randBoolean];
-        self.name = name;
-        self.weight = weight;
-        self.age = age;
-        self.mutableChildren = [NSMutableArray array];
-    }
-    
-    return self;
-}
-
-- (NSArray *)initArrayWithObjectsCount:(NSUInteger) count {
-    NSArray *names = @[@"Jack", @"Mike", @"Alex", @"John", @"Anna", @"Jane"];
-    NSMutableArray *children = self.mutableChildren;
-    children = [NSMutableArray array];
-    for (int i = 0; i < count; i++) {
-        IDPPerson *p = [[IDPPerson new] autorelease];
-        NSString *name = names[[NSObject randUpTo:(uint32_t)names.count]];
-        BOOL gender = [NSObject randBoolean];
-        NSNumber *weight = [NSNumber numberWithInteger:[NSObject randStartWith:50 range:100]];
-        NSUInteger age = [NSObject randStartWith:1 range:100];
-        [p initWithName:name gender:gender weight:weight age:age];
-        [children addObject:p];
-    }
-    
-    self.mutableChildren = children;
-    
-    return children;
-}
-
-- (IDPPerson *)giveBirth {
-    IDPPerson *person = [[IDPPerson new] autorelease];
+- (IDPPerson *)childCreate {
+    IDPPerson *person = [IDPPerson object];
     NSLog(@"A new person was born!");
     
     return person;
@@ -87,6 +57,8 @@
 - (void)addChild:(IDPPerson *)child {
     if (child) {
         [self.mutableChildren addObject:child];
+    } else {
+        NSLog(@"Can not add null object!");
     }
 }
 
@@ -96,7 +68,7 @@
 
 - (void)removeChildAtIndex:(NSUInteger)index {
     NSMutableArray *children = self.mutableChildren;
-    if (children.count > index) {
+    if ([children count] > index) {
         [children removeObjectAtIndex:index];
     } else {
         NSLog(@"Error: wrong index!");
@@ -104,19 +76,9 @@
 }
 
 - (void)sayHi {
-    NSLog(@"Hi! My name is %@ -- %@", self.name, self);
+    NSLog(@"Hi! My name is %@ - %@", self.name, self);
     for (IDPPerson *person in self.mutableChildren) {
         [person sayHi];
-    }
-}
-
-- (void)genderCheck {
-    for (IDPPerson *person in self.mutableChildren) {
-        if (person.gender == IDPMale) {
-            [person makeWarNotLove];
-        } else {
-            [person giveBirth];
-        }
     }
 }
 

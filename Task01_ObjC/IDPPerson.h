@@ -6,10 +6,7 @@
 //  Copyright © 2017 Student003. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "IDPRandom.m"
-#import "IDPPerson.h"
-#import "IDPConstants.m"
+#import "IDPImportFiles.h"
 
 typedef NS_ENUM(NSUInteger, IDPGender) {
     IDPMale,
@@ -22,16 +19,13 @@ typedef NS_ENUM(NSUInteger, IDPGender) {
 @property (nonatomic, copy)NSNumber     *weight;
 @property (nonatomic, assign)NSInteger  age;
 
-@property (nonatomic, readonly, copy)NSArray        *children;
+@property (nonatomic, readonly, copy)NSArray    *children;
 
-//- (instancetype)initWithName:(NSString *)name gender:(IDPGender)gender weight:(NSNumber *)weight age:(NSUInteger)age;
-- (NSArray *)initArrayWithObjectsCount:(NSUInteger) count;
-- (IDPPerson *)giveBirth;
+- (IDPPerson *)childCreate;
 - (void)makeWarNotLove;
 - (void)addChild:(IDPPerson *)child;
 - (void)removeLastChild;
 - (void)removeChildAtIndex:(NSUInteger)index;
 - (void)sayHi;
-- (void)genderCheck;
 
 @end

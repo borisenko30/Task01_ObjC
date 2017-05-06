@@ -9,7 +9,15 @@
 #import "IDPPersonTests.h"
 
 void IDPPersonTest() {
-    for (int i = 0; i < kIDPMaxCount; i++) {
-        NSLog(@"%lu", IDPRandomWithRange(NSMakeRange(kIDPLocation, kIDPLength)));
-    }
+    NSArray *childrenArray = [NSArray arrayOfObjectsWithCount:kIDPMaxArrayLength
+                                                 factoryBlock:^ {
+                                                    return [IDPPerson object];
+                                                 }];
+        for (IDPPerson *person in childrenArray) {
+            if (person.gender == IDPMale) {
+                [person makeWarNotLove];
+            } else {
+                [person childCreate];
+            }
+        }
 }

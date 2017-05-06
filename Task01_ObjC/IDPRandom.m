@@ -6,18 +6,14 @@
 //  Copyright © 2017 Student003. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-static NSUInteger IDPRandom(NSUInteger max);
-static NSUInteger IDPRandomWithRange(NSRange range);
-static NSUInteger IDPRandomBool();
+#import "IDPRandom.h"
 
 NSUInteger IDPRandom(NSUInteger max) {
-    return arc4random_uniform(max);
+    return arc4random_uniform((u_int32_t)max);
 }
 
-NSUInteger IDPRandomWithRange(NSRange range){
-    return IDPRandom(range.length) + range.location;
+NSUInteger IDPRandomWithRange(NSRange range) {
+    return range.location + IDPRandom(range.length);
 }
 
 NSUInteger IDPRandomBool() {
