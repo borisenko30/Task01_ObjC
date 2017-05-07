@@ -63,7 +63,10 @@
 }
 
 - (void)removeLastChild {
-    [self.mutableChildren removeLastObject];
+    NSMutableArray *children = self.mutableChildren;
+    if ([children count]) {
+        [children removeLastObject];
+    }
 }
 
 - (void)removeChildAtIndex:(NSUInteger)index {
