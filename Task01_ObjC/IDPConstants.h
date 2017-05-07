@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 extern NSUInteger const kIDPMaxArrayLength;
-extern NSUInteger const kIDPLocation;
-extern NSUInteger const kIDPLength;
-extern NSUInteger const kIDPMinWeight;
-extern NSUInteger const kIDPWeightRange;
-extern NSUInteger const kIDPMaxAge;
+extern NSUInteger const kIDPRangeLocation;
+extern NSUInteger const kIDPRangeLength;
+extern NSUInteger const kIDPPersonMinWeight;
+extern NSUInteger const kIDPPersonWeightRange;
+extern NSUInteger const kIDPPersonMaxAge;

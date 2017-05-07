@@ -9,8 +9,8 @@
 #import "IDPConstants.h"
 
 NSUInteger const kIDPMaxArrayLength = 10;
-NSUInteger const kIDPLocation = 5;
-NSUInteger const kIDPLength = 8;
-NSUInteger const kIDPMinWeight = 50;
-NSUInteger const kIDPWeightRange = 100;
-NSUInteger const kIDPMaxAge = 100;
+NSUInteger const kIDPRangeLocation = 5;
+NSUInteger const kIDPRangeLength = 8;
+NSUInteger const kIDPPersonMinWeight = 50;
+NSUInteger const kIDPPersonWeightRange = 100;
+NSUInteger const kIDPPersonMaxAge = 100;

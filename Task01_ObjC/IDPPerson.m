@@ -10,7 +10,7 @@
 
 @interface IDPPerson ()
 
-@property (nonatomic, retain)NSMutableArray *mutableChildren;
+@property (nonatomic, retain) NSMutableArray *mutableChildren;
 
 @end
 
@@ -31,15 +31,15 @@
     if (self) {
         self.gender = IDPRandomBool()?IDPMale:IDPFemale;
         self.name = names[IDPRandom([names count])];
-        self.weight = [NSNumber numberWithInteger:IDPRandomWithRange(NSMakeRange(kIDPMinWeight, kIDPWeightRange))];
-        self.age = IDPRandom(kIDPMaxAge);
+        self.weight = [NSNumber numberWithInteger:IDPRandomWithRange(NSMakeRange(kIDPPersonMinWeight, kIDPPersonWeightRange))];
+        self.age = IDPRandom(kIDPPersonMaxAge);
         self.mutableChildren = [NSMutableArray array];
     }
     
     return self;
 }
 
-- (IDPPerson *)childCreate {
+- (IDPPerson *)child {
     IDPPerson *person = [IDPPerson object];
     NSLog(@"A new person was born!");
     

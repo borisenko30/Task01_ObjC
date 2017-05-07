@@ -17,7 +17,7 @@ void IDPPersonTest() {
             if (person.gender == IDPMale) {
                 [person makeWarNotLove];
             } else {
-                [person childCreate];
+                [person child];
             }
         }
 }
