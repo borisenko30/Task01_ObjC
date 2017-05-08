@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+#define constantDeclaration(name) extern NSUInteger const name;
+
+constantDeclaration(kIDPMaxArrayLength)
+constantDeclaration(kIDPRangeLocation)
+constantDeclaration(kIDPRangeLength)
+constantDeclaration(kIDPPersonMinWeight)
+constantDeclaration(kIDPPersonWeightRange)
+constantDeclaration(kIDPPersonMaxAge)
+
 extern NSUInteger const kIDPMaxArrayLength;
 extern NSUInteger const kIDPRangeLocation;
 extern NSUInteger const kIDPRangeLength;

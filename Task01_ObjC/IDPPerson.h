@@ -14,18 +14,17 @@ typedef NS_ENUM(NSUInteger, IDPGender) {
 };
 
 @interface IDPPerson : NSObject
-@property (nonatomic, assign) IDPGender   gender;
-@property (nonatomic, copy)   NSString    *name;
-@property (nonatomic, copy)   NSNumber    *weight;
-@property (nonatomic, assign) NSUInteger   age;
+@property (nonatomic, assign)   IDPGender   gender;
+@property (nonatomic, copy)     NSString    *name;
+@property (nonatomic, copy)     NSNumber    *weight;
+@property (nonatomic, assign)   NSUInteger  age;
 
 @property (nonatomic, readonly, copy) NSArray    *children;
 
 - (IDPPerson *)child;
 - (void)makeWarNotLove;
 - (void)addChild:(IDPPerson *)child;
-- (void)removeLastChild;
-- (void)removeChildAtIndex:(NSUInteger)index;
+- (void)removeChild:(IDPPerson *)child;
 - (void)sayHi;
 
 @end

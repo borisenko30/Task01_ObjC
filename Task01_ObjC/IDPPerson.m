@@ -7,12 +7,13 @@
 //
 
 #import "IDPPerson.h"
+
 #import "IDPRandom.h"
 #import "IDPConstants.h"
-#import "NSObject+IDPFactoryObject.h"
+
+#import "NSObject+IDPExtensions.h"
 
 @interface IDPPerson ()
-
 @property (nonatomic, retain) NSMutableArray *mutableChildren;
 
 @end
@@ -25,6 +26,7 @@
     self.name = nil;
     self.weight = nil;
     self.mutableChildren = nil;
+    
     [super dealloc];
 }
 
@@ -32,8 +34,8 @@
     NSArray *names = @[@"Jack", @"Mike", @"Alex", @"John", @"Anna", @"Jane"];
     self = [super init];
     if (self) {
-        self.gender = IDPRandomBool()?IDPMale:IDPFemale;
-        self.name = names[IDPRandom([names count])];
+        self.gender = IDPRandomBool() ? IDPMale : IDPFemale;
+        self.name = names[IDPRandom(names.count)];
         self.weight = [NSNumber numberWithInteger:IDPRandomWithRange(NSMakeRange(kIDPPersonMinWeight, kIDPPersonWeightRange))];
         self.age = IDPRandom(kIDPPersonMaxAge);
         self.mutableChildren = [NSMutableArray array];
@@ -65,17 +67,8 @@
     }
 }
 
-- (void)removeLastChild {
-    [self.mutableChildren removeLastObject];
-}
-
-- (void)removeChildAtIndex:(NSUInteger)index {
-    NSMutableArray *children = self.mutableChildren;
-    if ([children count] > index) {
-        [children removeObjectAtIndex:index];
-    } else {
-        NSLog(@"Error: wrong index!");
-    }
+- (void)removeChild:(IDPPerson *)child {
+    [self.mutableChildren removeObject:child];
 }
 
 - (void)sayHi {

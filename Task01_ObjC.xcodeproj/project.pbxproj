@@ -11,8 +11,8 @@
 		844ACFD41EBE0F4F004B7F9A /* IDPPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 844ACFCA1EBE0F4F004B7F9A /* IDPPerson.m */; };
 		844ACFD51EBE0F4F004B7F9A /* IDPPersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844ACFCC1EBE0F4F004B7F9A /* IDPPersonTests.m */; };
 		844ACFD61EBE0F4F004B7F9A /* IDPRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 844ACFCE1EBE0F4F004B7F9A /* IDPRandom.m */; };
-		844ACFD81EBE0F4F004B7F9A /* NSArray+IDPArrayOfObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 844ACFD11EBE0F4F004B7F9A /* NSArray+IDPArrayOfObjects.m */; };
-		844ACFD91EBE0F4F004B7F9A /* NSObject+IDPFactoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 844ACFD31EBE0F4F004B7F9A /* NSObject+IDPFactoryObject.m */; };
+		844ACFD81EBE0F4F004B7F9A /* NSArray+IDPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 844ACFD11EBE0F4F004B7F9A /* NSArray+IDPExtensions.m */; };
+		844ACFD91EBE0F4F004B7F9A /* NSObject+IDPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 844ACFD31EBE0F4F004B7F9A /* NSObject+IDPExtensions.m */; };
 		844ACFEB1EBE44A2004B7F9A /* IDPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 844ACFC81EBE0F4F004B7F9A /* IDPConstants.m */; };
 /* End PBXBuildFile section */
 
@@ -36,10 +36,10 @@
 		844ACFCA1EBE0F4F004B7F9A /* IDPPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPPerson.m; sourceTree = "<group>"; };
 		844ACFCC1EBE0F4F004B7F9A /* IDPPersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPPersonTests.m; sourceTree = "<group>"; };
 		844ACFCE1EBE0F4F004B7F9A /* IDPRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPRandom.m; sourceTree = "<group>"; };
-		844ACFD01EBE0F4F004B7F9A /* NSArray+IDPArrayOfObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+IDPArrayOfObjects.h"; sourceTree = "<group>"; };
-		844ACFD11EBE0F4F004B7F9A /* NSArray+IDPArrayOfObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+IDPArrayOfObjects.m"; sourceTree = "<group>"; };
-		844ACFD21EBE0F4F004B7F9A /* NSObject+IDPFactoryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+IDPFactoryObject.h"; sourceTree = "<group>"; };
-		844ACFD31EBE0F4F004B7F9A /* NSObject+IDPFactoryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IDPFactoryObject.m"; sourceTree = "<group>"; };
+		844ACFD01EBE0F4F004B7F9A /* NSArray+IDPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+IDPExtensions.h"; sourceTree = "<group>"; };
+		844ACFD11EBE0F4F004B7F9A /* NSArray+IDPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+IDPExtensions.m"; sourceTree = "<group>"; };
+		844ACFD21EBE0F4F004B7F9A /* NSObject+IDPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+IDPExtensions.h"; sourceTree = "<group>"; };
+		844ACFD31EBE0F4F004B7F9A /* NSObject+IDPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IDPExtensions.m"; sourceTree = "<group>"; };
 		844ACFE71EBE40EB004B7F9A /* IDPRandom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDPRandom.h; sourceTree = "<group>"; };
 		844ACFE81EBE4239004B7F9A /* IDPPersonTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDPPersonTests.h; sourceTree = "<group>"; };
 		844ACFE91EBE42FD004B7F9A /* IDPConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDPConstants.h; sourceTree = "<group>"; };
@@ -116,10 +116,10 @@
 		84D9922B1EBF5EA000D6372F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				844ACFD21EBE0F4F004B7F9A /* NSObject+IDPFactoryObject.h */,
-				844ACFD31EBE0F4F004B7F9A /* NSObject+IDPFactoryObject.m */,
-				844ACFD01EBE0F4F004B7F9A /* NSArray+IDPArrayOfObjects.h */,
-				844ACFD11EBE0F4F004B7F9A /* NSArray+IDPArrayOfObjects.m */,
+				844ACFD21EBE0F4F004B7F9A /* NSObject+IDPExtensions.h */,
+				844ACFD31EBE0F4F004B7F9A /* NSObject+IDPExtensions.m */,
+				844ACFD01EBE0F4F004B7F9A /* NSArray+IDPExtensions.h */,
+				844ACFD11EBE0F4F004B7F9A /* NSArray+IDPExtensions.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -180,12 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844ACFD91EBE0F4F004B7F9A /* NSObject+IDPFactoryObject.m in Sources */,
+				844ACFD91EBE0F4F004B7F9A /* NSObject+IDPExtensions.m in Sources */,
 				844ACFD61EBE0F4F004B7F9A /* IDPRandom.m in Sources */,
 				844ACFD51EBE0F4F004B7F9A /* IDPPersonTests.m in Sources */,
 				844ACFD41EBE0F4F004B7F9A /* IDPPerson.m in Sources */,
 				844ACFEB1EBE44A2004B7F9A /* IDPConstants.m in Sources */,
-				844ACFD81EBE0F4F004B7F9A /* NSArray+IDPArrayOfObjects.m in Sources */,
+				844ACFD81EBE0F4F004B7F9A /* NSArray+IDPExtensions.m in Sources */,
 				844ACFC21EBE0ED5004B7F9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
