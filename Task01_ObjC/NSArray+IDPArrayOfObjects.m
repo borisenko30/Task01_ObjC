@@ -7,6 +7,7 @@
 //
 
 #import "NSArray+IDPArrayOfObjects.h"
+#import "NSObject+IDPFactoryObject.h"
 
 @implementation NSArray (IDPArrayOfObjects)
 

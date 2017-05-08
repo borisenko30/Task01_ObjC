@@ -7,6 +7,9 @@
 //
 
 #import "IDPPerson.h"
+#import "IDPRandom.h"
+#import "IDPConstants.h"
+#import "NSObject+IDPFactoryObject.h"
 
 @interface IDPPerson ()
 
@@ -40,10 +43,10 @@
 }
 
 - (IDPPerson *)child {
-    IDPPerson *person = [IDPPerson object];
+    IDPPerson *child = [IDPPerson object];
     NSLog(@"A new person was born!");
     
-    return person;
+    return child;
 }
 
 - (void)makeWarNotLove {
@@ -63,10 +66,7 @@
 }
 
 - (void)removeLastChild {
-    NSMutableArray *children = self.mutableChildren;
-    if ([children count]) {
-        [children removeLastObject];
-    }
+    [self.mutableChildren removeLastObject];
 }
 
 - (void)removeChildAtIndex:(NSUInteger)index {

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Student003. All rights reserved.
 //
 
-#import "IDPImportFiles.h"
+#import <Foundation/Foundation.h>
 
 @interface NSArray (IDPArrayOfObjects)
 

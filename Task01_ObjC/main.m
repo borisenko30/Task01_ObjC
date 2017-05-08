@@ -6,7 +6,8 @@
 //  Copyright (c) 2017 Admin. All rights reserved.
 //
 
-#import "IDPImportFiles.h"
+#import <Foundation/Foundation.h>
+#import "IDPPersonTests.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
