@@ -36,8 +36,8 @@
     if (self) {
         self.gender = IDPRandomBool() ? IDPMale : IDPFemale;
         self.name = names[IDPRandom(names.count)];
-        self.weight = [NSNumber numberWithInteger:IDPRandomWithRange(NSMakeRange(kIDPPersonMinWeight, kIDPPersonWeightRange))];
-        self.age = IDPRandom(kIDPPersonMaxAge);
+        self.weight = [NSNumber numberWithInteger:IDPRandomWithRange(IDPWeightRange)];
+        self.age = IDPRandom(IDPPersonMaxAge);
         self.mutableChildren = [NSMutableArray array];
     }
     

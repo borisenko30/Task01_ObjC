@@ -6,10 +6,12 @@
 //  Copyright © 2017 Student003. All rights reserved.
 //
 
+#import "IDPPerson.h"
+
+#import "IDPConstants.h"
+
 #import "NSObject+IDPExtensions.h"
 #import "NSArray+IDPExtensions.h"
-#import "IDPPerson.h"
-#import "IDPConstants.h"
 
 @implementation NSObject (IDPExtensions)
 
@@ -18,9 +20,10 @@
 }
 
 + (NSArray *)objectsWithCount:(NSUInteger)count {
-    NSArray *objects = [NSArray objectsWithCount:kIDPMaxArrayLength factoryBlock:^ {
-        return [self object];
-    }];
+    NSArray *objects = [NSArray objectsWithCount:IDPMaxArrayLength
+                                    factoryBlock:^ {
+                                        return [self object];
+                                    }];
     
     return objects;
 }
