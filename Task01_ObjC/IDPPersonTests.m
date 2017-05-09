@@ -15,8 +15,8 @@
 #import "NSArray+IDPExtensions.h"
 
 void IDPPersonTest() {
-    NSArray *childrenArray = [IDPPerson objectsWithCount:IDPMaxArrayLength];
-    for (IDPPerson *person in childrenArray) {
+    NSArray *children = [IDPPerson objectsWithCount:IDPMaxArrayLength];
+    for (IDPPerson *person in children) {
         if (person.gender == IDPMale) {
             [person makeWarNotLove];
         } else {
