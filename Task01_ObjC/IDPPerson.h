@@ -23,8 +23,9 @@ typedef NS_ENUM(NSUInteger, IDPGender) {
 
 - (IDPPerson *)child;
 - (void)makeWarNotLove;
+- (void)sayHi;
+
 - (void)addChild:(IDPPerson *)child;
 - (void)removeChild:(IDPPerson *)child;
-- (void)sayHi;
 
 @end

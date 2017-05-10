@@ -45,10 +45,9 @@
 }
 
 - (IDPPerson *)child {
-    IDPPerson *child = [IDPPerson object];
     NSLog(@"A new person was born!");
     
-    return child;
+    return [IDPPerson object];
 }
 
 - (void)makeWarNotLove {
