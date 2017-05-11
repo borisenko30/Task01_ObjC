@@ -7,6 +7,7 @@
 //
 
 #import "IDPPersonTests.h"
+
 #import "IDPPerson.h"
 
 #import "IDPConstants.h"

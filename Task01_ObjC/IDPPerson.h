@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, IDPGender) {
 @property (nonatomic, copy)     NSNumber    *weight;
 @property (nonatomic, assign)   NSUInteger  age;
 
-@property (nonatomic, readonly, copy) NSArray    *children;
+@property (nonatomic, readonly, copy) NSArray *children;
 
 - (IDPPerson *)child;
 - (void)makeWarNotLove;

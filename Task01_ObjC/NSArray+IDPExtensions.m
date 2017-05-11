@@ -21,7 +21,7 @@
         [objects addObject:block()];
     }
     
-    return objects;
+    return [self arrayWithArray:objects];
 }
 
 @end

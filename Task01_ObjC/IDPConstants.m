@@ -8,9 +8,4 @@
 
 #import "IDPConstants.h"
 
-#define constantInit(type, name, value) type const name = value;
-
-constantInit(NSUInteger, IDPMaxArrayLength, 10)
-constantInit(NSUInteger, IDPPersonMaxAge, 100)
-
-NSRange const IDPWeightRange = {50, 100};
+IDPInitConstant(NSUInteger, IDPMaxArrayLength, 10)

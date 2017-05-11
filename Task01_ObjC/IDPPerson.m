@@ -9,9 +9,12 @@
 #import "IDPPerson.h"
 
 #import "IDPRandom.h"
-#import "IDPConstants.h"
+#import "IDPMacros.h"
 
 #import "NSObject+IDPExtensions.h"
+
+IDPStaticConstant(NSUInteger, IDPPersonMaxAge, 100)
+IDPStaticConstantRange(NSRange, IDPWeightRange, 50, 100)
 
 @interface IDPPerson ()
 @property (nonatomic, retain) NSMutableArray *mutableChildren;
@@ -44,18 +47,25 @@
     return self;
 }
 
+- (NSArray *)children {
+    return [[self.mutableChildren copy] autorelease];
+}
+
 - (IDPPerson *)child {
     NSLog(@"A new person was born!");
     
     return [IDPPerson object];
 }
 
-- (void)makeWarNotLove {
-    NSLog(@"You're in the army now!\nGo and kill somebody!");
+- (void)sayHi {
+    NSLog(@"Hi! My name is %@ - %@", self.name, self);
+    for (IDPPerson *person in self.mutableChildren) {
+        [person sayHi];
+    }
 }
 
-- (NSArray *)children {
-    return [[self.mutableChildren copy] autorelease];
+- (void)makeWarNotLove {
+    NSLog(@"You're in the army now!\nGo and kill somebody!");
 }
 
 - (void)addChild:(IDPPerson *)child {
@@ -68,13 +78,6 @@
 
 - (void)removeChild:(IDPPerson *)child {
     [self.mutableChildren removeObject:child];
-}
-
-- (void)sayHi {
-    NSLog(@"Hi! My name is %@ - %@", self.name, self);
-    for (IDPPerson *person in self.mutableChildren) {
-        [person sayHi];
-    }
 }
 
 @end

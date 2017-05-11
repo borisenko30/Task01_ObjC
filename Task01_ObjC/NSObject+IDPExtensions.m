@@ -20,12 +20,10 @@
 }
 
 + (NSArray *)objectsWithCount:(NSUInteger)count {
-    NSArray *objects = [NSArray objectsWithCount:IDPMaxArrayLength
-                                    factoryBlock:^ {
-                                        return [self object];
-                                    }];
-    
-    return objects;
+    return [NSArray objectsWithCount:IDPMaxArrayLength
+                        factoryBlock:^ {
+                            return [self object];
+                        }];
 }
 
 @end
